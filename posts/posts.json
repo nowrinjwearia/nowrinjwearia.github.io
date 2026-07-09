@@ -4,13 +4,13 @@
     "title": "Welcome to my corner of the web",
     "date": "2026-07-09",
     "tag": "Personal",
-    "excerpt": "Why I built this site, and what you'll find here — science, dentistry, and photographs."
+    "excerpt": "Why I built this site, and what you'll find here — dentistry, public health, and a path toward a DDS."
   },
   {
-    "slug": "clinic-to-lab",
-    "title": "From the clinic to the lab",
+    "slug": "why-dds",
+    "title": "Why I'm pursuing a DDS",
     "date": "2026-06-20",
-    "tag": "Science",
-    "excerpt": "How treating patients pushed me toward research, and what biotechnology is teaching me."
+    "tag": "Dentistry",
+    "excerpt": "How clinical practice and public-health volunteering are shaping my path toward an advanced-standing DDS."
   }
 ]
