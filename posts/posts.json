@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "welcome",
+    "title": "Welcome to my corner of the web",
+    "date": "2026-07-09",
+    "tag": "Personal",
+    "excerpt": "Why I built this site, and what you'll find here — science, dentistry, and photographs."
+  },
+  {
+    "slug": "clinic-to-lab",
+    "title": "From the clinic to the lab",
+    "date": "2026-06-20",
+    "tag": "Science",
+    "excerpt": "How treating patients pushed me toward research, and what biotechnology is teaching me."
+  }
+]

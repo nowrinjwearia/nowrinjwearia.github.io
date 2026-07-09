@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography · Jwearia Hoque Nowrin</title>
+  <meta name="description" content="A gallery of photographs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Jwearia<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Photography</p>
+          <h2>Through my lens</h2>
+          <p>Click any photo to enlarge. Use ← → or Esc.</p>
+        </div>
+
+        <!-- Add photos by dropping files in assets/img/ and adding a <figure> below -->
+        <div class="gallery reveal">
+          <figure><img src="assets/img/photo1.jpg" alt="Photograph 1" onerror="this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=900&q=80'"></figure>
+          <figure><img src="assets/img/photo2.jpg" alt="Photograph 2" onerror="this.src='https://images.unsplash.com/photo-1500534623283-312aade485b7?w=900&q=80'"></figure>
+          <figure><img src="assets/img/photo3.jpg" alt="Photograph 3" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&q=80'"></figure>
+          <figure><img src="assets/img/photo4.jpg" alt="Photograph 4" onerror="this.src='https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=900&q=80'"></figure>
+          <figure><img src="assets/img/photo5.jpg" alt="Photograph 5" onerror="this.src='https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&q=80'"></figure>
+          <figure><img src="assets/img/photo6.jpg" alt="Photograph 6" onerror="this.src='https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=900&q=80'"></figure>
+          <figure><img src="assets/img/photo7.jpg" alt="Photograph 7" onerror="this.src='https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=900&q=80'"></figure>
+          <figure><img src="assets/img/photo8.jpg" alt="Photograph 8" onerror="this.src='https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=900&q=80'"></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-nav prev" aria-label="Previous">&#8249;</button>
+    <img src="" alt="" />
+    <button class="lightbox-nav next" aria-label="Next">&#8250;</button>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social">
+        <a href="mailto:nowrin.jwearia@gmail.com" title="Email">✉️</a>
+        <a href="https://github.com/nowrinjwearia" target="_blank" rel="noopener" title="GitHub">GH</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram">IG</a>
+      </div>
+      <small>© <span id="year"></span> Jwearia Hoque Nowrin. Built with care.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

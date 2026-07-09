@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Jwearia Hoque Nowrin</title>
+  <meta name="description" content="Internationally trained dentist (BDS), INBDE-certified, public-health researcher at UC Berkeley, aiming for an advanced-standing DDS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Jwearia<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>A little about me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <img src="assets/img/about.jpg" alt="Portrait"
+                 onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80'" />
+          </div>
+
+          <div class="reveal">
+            <h3 style="font-size:1.6rem;margin-bottom:1rem;">From the clinic to public health</h3>
+            <p style="color:var(--text-muted);margin-bottom:1.1rem;">
+              I'm an internationally trained dentist. I earned my <strong>BDS</strong> from
+              Chittagong Medical College and completed a one-year clinical internship, then passed
+              the <strong>INBDE</strong> and gained U.S. dental shadowing experience — all rooted in
+              a commitment to evidence-based care.
+            </p>
+            <p style="color:var(--text-muted);margin-bottom:1.1rem;">
+              Today I work in <strong>public-health research</strong> at UC Berkeley, with a
+              peer-reviewed publication and a growing toolkit in data analysis (R, Stata). I'm drawn
+              to questions about oral-health outcomes and the disparities that shape them.
+            </p>
+            <p style="color:var(--text-muted);">
+              My goal is an <strong>advanced-standing DDS</strong> — to deepen my clinical expertise
+              and serve diverse patient populations. Outside the clinic and the data, I photograph
+              the moments I don't want to forget. This site is where those threads meet.
+            </p>
+
+            <div class="tag-row">
+              <span class="tag">Dentistry (BDS)</span>
+              <span class="tag">INBDE</span>
+              <span class="tag">Public Health</span>
+              <span class="tag">Research</span>
+              <span class="tag">DDS applicant</span>
+              <span class="tag">Photography</span>
+            </div>
+
+            <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+              <a href="contact.html" class="btn btn-primary">Get in touch</a>
+              <a href="photography.html" class="btn btn-ghost">View photography</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social">
+        <a href="mailto:nowrin.jwearia@gmail.com" title="Email">✉️</a>
+        <a href="https://github.com/nowrinjwearia" target="_blank" rel="noopener" title="GitHub">GH</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram">IG</a>
+      </div>
+      <small>© <span id="year"></span> Jwearia Hoque Nowrin. Built with care.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

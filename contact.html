@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · Jwearia Hoque Nowrin</title>
+  <meta name="description" content="Get in touch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Jwearia<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's talk</h2>
+          <p>Questions, collaborations, or just to say hi.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3 style="font-size:1.4rem;margin-bottom:1rem;">Reach me directly</h3>
+            <p>The fastest way is email — I usually reply within a day or two.</p>
+            <p>✉️ <a href="mailto:nowrin.jwearia@gmail.com">nowrin.jwearia@gmail.com</a></p>
+            <p>Or find me on:</p>
+            <div class="social" style="justify-content:flex-start;">
+              <a href="https://github.com/nowrinjwearia" target="_blank" rel="noopener" title="GitHub">GH</a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram">IG</a>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <!-- Formspree: create a free form at https://formspree.io and paste your
+                 endpoint below (replace YOUR_ID). Until then it falls back to email. -->
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send message</button>
+            </form>
+            <p id="formNote" style="color:var(--text-muted);font-size:.85rem;margin-top:.8rem;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social">
+        <a href="mailto:nowrin.jwearia@gmail.com" title="Email">✉️</a>
+        <a href="https://github.com/nowrinjwearia" target="_blank" rel="noopener" title="GitHub">GH</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram">IG</a>
+      </div>
+      <small>© <span id="year"></span> Jwearia Hoque Nowrin. Built with care.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Graceful fallback: if Formspree isn't configured yet, send via the user's mail client.
+    const form = document.getElementById('contactForm');
+    const note = document.getElementById('formNote');
+    form.addEventListener('submit', (e) => {
+      if (form.action.includes('YOUR_ID')) {
+        e.preventDefault();
+        const n = encodeURIComponent(form.name.value);
+        const m = encodeURIComponent(form.message.value + '\n\n— ' + form.name.value + ' (' + form.email.value + ')');
+        window.location.href = `mailto:nowrin.jwearia@gmail.com?subject=Portfolio message from ${n}&body=${m}`;
+        note.textContent = 'Opening your email app… (Set up Formspree to receive messages here directly.)';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jwearia Hoque Nowrin · Portfolio</title>
+  <meta name="description" content="Dentist, biotechnology student, photographer & writer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Jwearia<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <main class="page">
+    <div class="container">
+      <section class="hero">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Dentist · Public Health Researcher · Photographer</p>
+          <h1>Hi, I'm <span class="accent">Jwearia Hoque Nowrin</span>.</h1>
+          <p class="lead">An internationally trained dentist (BDS) and public-health researcher in Berkeley — working toward a DDS and better oral-health equity, one patient and one photograph at a time.</p>
+          <div class="hero-actions">
+            <a href="about.html" class="btn btn-primary">About me →</a>
+            <a href="photography.html" class="btn btn-ghost">View photography</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <span class="blob one"></span>
+          <span class="blob two"></span>
+          <img src="assets/img/hero.jpg" alt="Portrait" onerror="this.style.display='none'" />
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== Featured photo ===== -->
+    <section class="featured">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Featured</p>
+          <h2>A moment I loved</h2>
+          <p>One frame from the gallery.</p>
+        </div>
+        <div class="card reveal" style="max-width:820px;margin:0 auto;">
+          <img src="assets/img/featured.jpg" alt="Featured photograph"
+               style="width:100%;aspect-ratio:16/9;object-fit:cover;"
+               onerror="this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80'" />
+        </div>
+        <div style="text-align:center;margin-top:2rem;" class="reveal">
+          <a href="photography.html" class="btn btn-ghost">See the full gallery →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="social">
+        <a href="mailto:nowrin.jwearia@gmail.com" title="Email">✉️</a>
+        <a href="https://github.com/nowrinjwearia" target="_blank" rel="noopener" title="GitHub">GH</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram">IG</a>
+      </div>
+      <small>© <span id="year"></span> Jwearia Hoque Nowrin. Built with care.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
